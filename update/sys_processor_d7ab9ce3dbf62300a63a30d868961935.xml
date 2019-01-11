@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_processor">
+    <sys_processor action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <description>Sample how to render QRs&#13;
+Example use: /x_snc_qrcode_qrgenerate.do?data=ServiceNow Rocks!&#13;
+Will render a img of a QR Code containing the text ServiceNow Rocks!&#13;
+&#13;
+URL Parameters:&#13;
+data: text to encode&#13;
+type: type to render, options: imgtag, svgtag, dataurl&#13;
+size: number of the size: default 4&#13;
+margin: margin of the image&#13;
+</description>
+        <interactive>false</interactive>
+        <name>qrgenerate</name>
+        <parameters/>
+        <params_endpoint/>
+        <path>qrgenerate</path>
+        <path_endpoint>x_snc_qrcode_qrgenerate</path_endpoint>
+        <require_csrf>false</require_csrf>
+        <roles/>
+        <script><![CDATA[(function process(g_request, g_response, g_processor) {
+	
+	var typeNumber = 4;
+	var errorCorrectionLevel = 'H';
+	var data = g_request.getParameter('data') || "ServiceNow!";
+	var type = g_request.getParameter('type');
+	var size = g_request.getParameter('size') || 4;
+	var margin = g_request.getParameter('margin');
+	
+	var qr = qrcode(typeNumber, errorCorrectionLevel);
+	qr.addData(data);
+	qr.make();
+	
+	var output;
+	if (type == "imgtag")
+		output = qr.createImgTag(size, margin);
+	else if (type == "svgtag")
+		output = qr.createSvgTag(size, margin);
+	else if (type == "tabletag")
+		output = qr.createTableTag(size, margin);
+	else if (type == "ascii")
+		output = qr.createASCII(size, margin);
+	else {
+		output = qr.createDataURL(size, margin);
+	}
+	
+	g_response.setContentType("text/html");
+	g_processor.writeOutput(output);
+	
+	
+})(g_request, g_response, g_processor);]]></script>
+        <sys_class_name>sys_processor</sys_class_name>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-01-10 10:29:29</sys_created_on>
+        <sys_id>d7ab9ce3dbf62300a63a30d868961935</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>qrgenerate</sys_name>
+        <sys_package display_value="qrcode" source="x_snc_qrcode">460a98a3dbf62300a63a30d868961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="qrcode">460a98a3dbf62300a63a30d868961940</sys_scope>
+        <sys_update_name>sys_processor_d7ab9ce3dbf62300a63a30d868961935</sys_update_name>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-01-11 14:10:36</sys_updated_on>
+        <type>script</type>
+    </sys_processor>
+</record_update>

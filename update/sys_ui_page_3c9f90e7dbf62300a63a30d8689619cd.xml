@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>Generates a Page with QR codes that can be printed.&#13;
+URL Parameters: &#13;
+sysparm_field: Field to encode in the QR Code&#13;
+sysparm_table: Table to query&#13;
+sysparm_query: Encoded query to filter results&#13;
+&#13;
+System propertie:&#13;
+Create custom.qrcode.max_to_render to override the default maximum of 100 QR codes to render at once.&#13;
+</description>
+        <direct>true</direct>
+        <endpoint>x_snc_qrcode_qr_print.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<title>QR Codes</title>
+	<style>
+		.qrdiv{
+			margin:3px; 
+			font: 9pt helvetia, arial, sans-serif;
+			border:1pt solid #E5E5E5; 
+			height:188px;
+			width:160px;
+			text-align: center;
+		}
+		.label {
+			margin:5px; 
+			height:33px;
+		}
+		.labeltable {
+			font-size: 7pt 
+		}
+	</style>
+	<g:evaluate object="true">
+		var gr_contexts = new GlideRecordSecure('${sysparm_table}');
+		gr_contexts.addEncodedQuery('${sysparm_query}'); 
+		gr_contexts.setLimit(gs.getProperty('custom.qrcode.max_to_render',100));
+		gr_contexts.query();
+		gr_contexts;
+	</g:evaluate>
+	
+	<g:evaluate object="true">
+		var field = '${sysparm_field}' || 'sys_id';
+		field;
+	</g:evaluate>
+	
+	<div style="display: grid; grid-template-columns: auto auto auto auto auto; width:210mm;">
+		<j:while test="${gr_contexts.next()}">
+			
+			<g:evaluate object="true">	
+				var qr = x_snc_qrcode.qrcode(4, 'H');
+				qr.addData('${gr_contexts.getValue(field)}');
+				qr.make();
+				qrdata = qr.createDataURL(4,2);
+			</g:evaluate>
+
+		<div class="qrdiv">
+			<div class="label">
+				${gr_contexts.getDisplayValue()}
+				<div class="labeltable">${gr_contexts.getDisplayValue('sys_class_name')}</div>
+			</div>
+			<img src="${qrdata}" alt="qr"/>
+		</div>
+		</j:while>
+</div>
+	
+
+		
+	
+
+</j:jelly>]]></html>
+        <name>qr_print</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-01-10 10:45:46</sys_created_on>
+        <sys_id>3c9f90e7dbf62300a63a30d8689619cd</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_name>qr_print</sys_name>
+        <sys_package display_value="qrcode" source="x_snc_qrcode">460a98a3dbf62300a63a30d868961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="qrcode">460a98a3dbf62300a63a30d868961940</sys_scope>
+        <sys_update_name>sys_ui_page_3c9f90e7dbf62300a63a30d8689619cd</sys_update_name>
+        <sys_updated_by>arnoud.kooi</sys_updated_by>
+        <sys_updated_on>2019-01-11 13:56:36</sys_updated_on>
+    </sys_ui_page>
+</record_update>
