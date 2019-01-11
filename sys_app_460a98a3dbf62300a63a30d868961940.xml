@@ -2,12 +2,12 @@
     <sys_app action="INSERT_OR_UPDATE">
         <active>true</active>
         <can_edit_in_studio>false</can_edit_in_studio>
-        <enforce_license>none</enforce_license>
+        <enforce_license>log</enforce_license>
         <js_level>helsinki_es5</js_level>
         <licensable>true</licensable>
         <license_category>none</license_category>
         <license_model>none</license_model>
-        <logo/>
+        <logo>cd59da77dbfa2300a63a30d8689619ee</logo>
         <menu/>
         <name>qrcode</name>
         <private>false</private>
@@ -24,9 +24,9 @@
         <sys_created_by>arnoud.kooi</sys_created_by>
         <sys_created_on>2019-01-10 10:21:18</sys_created_on>
         <sys_id>460a98a3dbf62300a63a30d868961940</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>arnoud.kooi</sys_updated_by>
-        <sys_updated_on>2019-01-10 10:21:18</sys_updated_on>
+        <sys_updated_on>2019-01-11 14:15:56</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
@@ -34,4 +34,43 @@
         <vendor_prefix/>
         <version>1.0.0</version>
     </sys_app>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#0</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/gif</content_type>
+        <encryption_context/>
+        <file_name>logo</file_name>
+        <image_height>132</image_height>
+        <image_width>132</image_width>
+        <size_bytes>1338</size_bytes>
+        <size_compressed>1361</size_compressed>
+        <state>available</state>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-01-11 14:15:56</sys_created_on>
+        <sys_id>cd59da77dbfa2300a63a30d8689619ee</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2019-01-11 14:15:58</sys_updated_on>
+        <table_name>ZZ_YYsys_app</table_name>
+        <table_sys_id>460a98a3dbf62300a63a30d868961940</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="logo" sys_id="cd59da77dbfa2300a63a30d8689619ee">cd59da77dbfa2300a63a30d8689619ee</sys_attachment>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-01-11 14:15:56</sys_created_on>
+        <sys_id>0159da77dbfa2300a63a30d8689619ef</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>AToFxfpHSUY4N2GEAIQAgAAAAAAA////LAAAAACEAIQAAAL/hI+pG+29wJsOURhZPXfmD4aidEXdY5UjiRnntsay0plvkFIxyt3z/6tpXjnPiufyAUG3UzGEZDl7LWlUmKw2sYmtKotjwqxfafFaRnuj5/VTrFWC23EdNQxe47v6MXu41/SW55dW2Lc3mKGWeDQG9QjIqGhTRQl4OfL3sclnN3cHaRkKFxipebqYSmda10iT2qkoW7qzejdJyhl7C+qr6sUqLGk4CmtsVqsLvDVMiCy4XPmavOsq2ox7aHQ89TsNrvxNTKTt2hk93h1u3eo+rZdJdr6Nzc48y4soz9XfW+2JWr5r5LKpm+cuV7t79xQGjCfNXMJ64h66iYiK3r5S/4wgdvMI0JbGPtg6Xvx4MqSjkSDhbWspMZ3KjBM3tjMZbMnCZQ57UvxFS6dQgD4JAv1J9N9QIEXf8UTadKnUgAOdHjWaFOtQRDapPi1H0yXXsWShQZUjAl3ZtWUbvixjryDbuWirsgrqFSVdf5/Scq3alK9AjsW4+e2K0ypChyK9IWwMMjHgwkzRcimZUvJXx3jdsqS8We3nrgxX1uR8tu/kthUb3wV91fBqsnFnJBY82/Pc2odpx6wrcWpefMF/53xm0CKyrf80I4/8t6BwebmNJx8rdrBOvM5730bqTDm17yOFC8YtPf066+GZ95UpWnbx9c/fLg9SGL3e8XBD5/9XitFj+KlmWnsVcQcccpURGNZ8vVHHnnoyXFagg7whCJZ4C8rXoIIVHvQag8QdFF9pHu5U33sJjjhTiyVKqBt8K+pmoov6cDgcdBleeGON8WF4mn6L9bcfP/adZhcmm2VHYZEBdifki7ExSaSGTx4ZHmNLXnkcM1rGBiV4W4LIpWFNWklfVvyNhppZbppZpYFTlhlim2ve2V12NNJpnZBGqiiinGr+GaRlNwIJYYp4wrZEZzAqSaaiVGo1oHZeNifmfj8yuuGGiAZY56SKdUrYfYp+meN/O0IqHkyacsrqeTOWiV2pdvIIaHI+roVZhp+eOGSgtEYH7K65+jnssbz/Wshqloa+KWqdOuJIKHmjJgsnXYJWeySqmyrbZYypOWasnWfq+aGAYMaJrbWQAbguVjKVK6uwTnaorprnttstvPkii6+0WMZKbKvPWkrvwVIGS26fsAbscHkEkxZxtgg3W7Gg1p6516K5aswoW7PV+qq8VUa5bLy+lawYxyGnrC/Mofr3ZmAFuyvhxoemlGi+6NJk86qnnoypvT7bOjLRFEd69L3ejTtvxQv/fGnNPTKbJsrQRjg0m+KaGrPJW0uaMdepGh0mpSrr7PXE1NLc8tVkd30t3YTW6CzY7l1sN59pUu3odv5OW26vdU8XOMPeyl314ebtrC22Sf4NN850/xOec6Y2tj234jdDHvfYZ5ur6m6Sjzlc0pwjrvnMtikduuNCoer6hLBP3uLePUcNNONRTTfnTewKL/rvLGuNZNnAfmuxy4hB3S+4h8sotOcfwy2wxCQqDDvmKmef/Pa+rvjrv6Ujv+2BD4+e9nXQ6+027dg76H3YfLPf+vzLZ/b+/dUx3b564Yh5eFMf2AJ4PsaBDH5ZK1r4GFY7bonONaDSHwTNJsE7kQqA+VtbwQB3u9a4DVemI94Dd+dAFLLJVWhqWu4qGDwWdcxwC7QUycynvactjUV5Iwn9Bta7HSZshaX7nw59CLH9Pe96xbIVC4foPycCsVEpxCDGpEK9txklEX9o89e7pKc7AzaMcljkHgN5GL/hAaQAADs8uuEmOgUAAA==</data>
+        <length>1804</length>
+        <position>1</position>
+        <sys_attachment display_value="logo" sys_id="cd59da77dbfa2300a63a30d8689619ee">cd59da77dbfa2300a63a30d8689619ee</sys_attachment>
+        <sys_created_by>arnoud.kooi</sys_created_by>
+        <sys_created_on>2019-01-11 14:15:56</sys_created_on>
+        <sys_id>8159da77dbfa2300a63a30d8689619ef</sys_id>
+    </sys_attachment_doc>
 </record_update>
