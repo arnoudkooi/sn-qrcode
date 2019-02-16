@@ -44,7 +44,7 @@
 	}
 	
 	var url = '/x_snc_qrcode_qr_print.do?sysparm_table=' + table +
-			  '&sysparm_query=' + query;
+			  '&sysparm_field=asset_tag&sysparm_query=' + query;
 	g_navigation.openPopup(url);
 
 	
@@ -56,18 +56,20 @@
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>arnoud.kooi</sys_created_by>
         <sys_created_on>2019-01-10 20:06:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bf7f1eafdbbe230038b652f8f49619df</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>QR</sys_name>
         <sys_overrides/>
         <sys_package display_value="qrcode" source="x_snc_qrcode">460a98a3dbf62300a63a30d868961940</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="qrcode">460a98a3dbf62300a63a30d868961940</sys_scope>
         <sys_update_name>sys_ui_action_bf7f1eafdbbe230038b652f8f49619df</sys_update_name>
-        <sys_updated_by>arnoud.kooi</sys_updated_by>
-        <sys_updated_on>2019-01-11 09:07:57</sys_updated_on>
+        <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+        <sys_updated_on>2019-02-16 18:53:52</sys_updated_on>
         <table>cmdb_ci</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
